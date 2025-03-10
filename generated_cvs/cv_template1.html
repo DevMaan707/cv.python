@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mohammed Aymaan - CV</title>
+        <style>
+            /* Reset and Base Styles */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+            }
+
+            body {
+                color: #333;
+                line-height: 1.6;
+                background-color: #f5f5f5;
+                font-size: 14px;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                background: white;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Header Styles */
+            .cv-header {
+                padding: 40px;
+                background: #2c3e50;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .header-content h1 {
+                font-size: 2.4rem;
+                font-weight: 700;
+                margin-bottom: 5px;
+                letter-spacing: 1px;
+            }
+
+            .header-content h2 {
+                font-size: 1.2rem;
+                font-weight: 400;
+                margin-bottom: 20px;
+                color: #ecf0f1;
+            }
+
+            .contact-info {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                margin-top: 10px;
+                font-size: 0.95rem;
+            }
+
+            .contact-item {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .summary {
+                padding: 30px 40px;
+                background: #f8f9fa;
+                border-bottom: 1px solid #eee;
+            }
+
+            .summary p {
+                font-size: 1rem;
+                color: #555;
+                line-height: 1.7;
+                text-align: center;
+            }
+
+            /* Main Content */
+            .main-content {
+                padding: 30px 40px;
+            }
+
+            .section {
+                margin-bottom: 30px;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+                font-weight: 600;
+                margin-bottom: 20px;
+                color: #2c3e50;
+                border-bottom: 2px solid #3498db;
+                padding-bottom: 5px;
+                display: inline-block;
+            }
+
+            /* Experience Section */
+            .experience-item,
+            .education-item {
+                margin-bottom: 25px;
+            }
+
+            .experience-item h3,
+            .education-item h3 {
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin-bottom: 5px;
+                color: #2c3e50;
+            }
+
+            .company-details,
+            .institution-details {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+            }
+
+            .company-details h4,
+            .institution-details h4 {
+                font-size: 1rem;
+                font-weight: 600;
+                color: #3498db;
+            }
+
+            .location-date {
+                font-size: 0.9rem;
+                color: #777;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            .job-description p,
+            .education-description p {
+                font-size: 0.95rem;
+                color: #555;
+            }
+
+            /* Skills Section */
+            .skills-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .skill-item {
+                background: #e9f2fa;
+                padding: 6px 12px;
+                border-radius: 20px;
+                font-size: 0.9rem;
+                color: #2980b9;
+            }
+
+            /* Projects Section */
+            .project-item {
+                margin-bottom: 20px;
+            }
+
+            .project-item h3 {
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin-bottom: 5px;
+                color: #2c3e50;
+            }
+
+            .project-item h3 a {
+                color: #2c3e50;
+                text-decoration: none;
+            }
+
+            .project-item h3 a:hover {
+                color: #3498db;
+                text-decoration: underline;
+            }
+
+            .project-description p {
+                font-size: 0.95rem;
+                color: #555;
+                margin-bottom: 8px;
+            }
+
+            .technologies {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .tech-tag {
+                background: #f1f1f1;
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-size: 0.8rem;
+                color: #555;
+            }
+
+            /* Two Column Layout */
+            .two-column {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+
+            /* Languages Section */
+            .language-item {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #eee;
+            }
+
+            .language-name {
+                font-weight: 600;
+                color: #2c3e50;
+            }
+
+            .language-level {
+                color: #777;
+            }
+
+            /* Certifications Section */
+            .certification-item {
+                margin-bottom: 15px;
+            }
+
+            .certification-item h4 {
+                font-size: 1rem;
+                font-weight: 600;
+                margin-bottom: 5px;
+                color: #2c3e50;
+            }
+
+            .certification-details {
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.9rem;
+                color: #777;
+            }
+
+            /* Interests Section */
+            .interests-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .interest-item {
+                background: #f8f9fa;
+                padding: 6px 12px;
+                border-radius: 20px;
+                font-size: 0.9rem;
+                color: #555;
+            }
+
+            /* Footer */
+            .footer {
+                text-align: center;
+                padding: 20px;
+                background: #f8f9fa;
+                font-size: 0.8rem;
+                color: #999;
+                border-top: 1px solid #eee;
+            }
+
+            /* Media Queries */
+            @media (max-width: 768px) {
+                .two-column {
+                    grid-template-columns: 1fr;
+                }
+
+                .company-details,
+                .institution-details {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .location-date {
+                    align-items: flex-start;
+                    margin-top: 5px;
+                }
+            }
+
+            @media print {
+                body {
+                    background-color: white;
+                }
+
+                .container {
+                    box-shadow: none;
+                }
+
+                .cv-header {
+                    background-color: #2c3e50 !important;
+                    -webkit-print-color-adjust: exact;
+                    print-color-adjust: exact;
+                }
+
+                .section-title {
+                    border-bottom-color: #3498db !important;
+                    -webkit-print-color-adjust: exact;
+                    print-color-adjust: exact;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Header -->
+            <header class="cv-header">
+                <div class="header-content">
+                    <h1>Mohammed Aymaan</h1>
+                    <h2>Softeare Development Engineer</h2>
+                    <div class="contact-info">
+                        <span class="contact-item">📧 dev.maan707@gmail.com</span>
+                        <span class="contact-item">📱 +91 8008283186</span>
+                        <span class="contact-item"
+                            >📍 Hyderabad</span
+                        >
+                    </div>
+                    <div class="contact-info" style="margin-top: 5px">
+                        {{#personal.website}}
+                        <span class="contact-item"
+                            >🌐 https://portfolio.devmaan.services</span
+                        >
+                        {{/personal.website}} {{#personal.linkedin}}
+                        <span class="contact-item">👔 LinkedIn</span>
+                        {{/personal.linkedin}} {{#personal.github}}
+                        <span class="contact-item">💻 GitHub</span>
+                        {{/personal.github}}
+                    </div>
+                </div>
+            </header>
+
+            <!-- Professional Summary -->
+            <section class="summary">
+                <p>Results-driven App Developer at CoffeeCodes with a proven track record of delivering four real-time applications for real clients. Experienced in leading app development teams and managing interns while ensuring high-quality deliverables. Adept at balancing work and college commitments, demonstrating strong time management, leadership, and problem-solving skills. Passionate about building scalable, efficient, and user-centric applications in fast-paced environments.</p>
+            </section>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Experience Section -->
+                <section class="section">
+                    <h2 class="section-title">Experience</h2>
+                    <div class="experience-container">
+            <div class="experience-item">
+                <h3>Senior App Developer</h3>
+                <div class="company-details">
+                    <h4>CoffeeCodes</h4>
+                    <div class="location-date">
+                        <span>Gadwal,Hyderabad</span>
+                        <span>December, 2023 - Present</span>
+                    </div>
+                </div>
+                <div class="job-description">
+                    <p>Lead the app development team, ensuring timely project execution and delivery.<br>	•	Manage and mentor interns, providing guidance on best practices and technical skills.<br>	•	Develop and deploy real-time applications for clients, ensuring high performance and scalability.<br>	•	Balance multiple responsibilities by effectively managing work and college commitments.<br>	•	Collaborate with cross-functional teams to design, build, and optimize user-centric applications.<br>	•	Maintain high coding standards, conduct code reviews, and implement industry best practices.</p>
+                </div>
+            </div>
+            </div>
+                </section>
+
+                <!-- Education Section -->
+                <section class="section">
+                    <h2 class="section-title">Education</h2>
+                    <div class="education-container">
+            <div class="education-item">
+                <h3>Btech</h3>
+                <div class="institution-details">
+                    <h4>Anurag University</h4>
+                    <div class="location-date">
+                        <span>Ghatkesar ,Hyderabad</span>
+                        <span>October 2022 - June 2026</span>
+                    </div>
+                </div>
+                <div class="education-description">
+                    
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <h3>Intermediate(XI and XII)</h3>
+                <div class="institution-details">
+                    <h4>Narayana Junior College</h4>
+                    <div class="location-date">
+                        <span>Tarnaka,Hyderabad</span>
+                        <span>June 2020 - April 2022</span>
+                    </div>
+                </div>
+                <div class="education-description">
+                    
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <h3>High School</h3>
+                <div class="institution-details">
+                    <h4>Johnson Grammar School</h4>
+                    <div class="location-date">
+                        <span>Mallapur,Hyderabad</span>
+                        <span>June 2019 - April 2020</span>
+                    </div>
+                </div>
+                <div class="education-description">
+                    
+                </div>
+            </div>
+            </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section class="section">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="skills-container"><span class="skill-item">Technical Skills</span><span class="skill-item">	•	Programming Languages: Dart (Flutter), JavaScript, TypeScript, Go, Rust</span><span class="skill-item">	•	Mobile App Development: Flutter, React Native</span><span class="skill-item">	•	Backend Development: Node.js, Express.js, Gin, Fiber</span><span class="skill-item">	•	Database Management: PostgreSQL, Firebase, Redis, SQLite</span><span class="skill-item">	•	API Development: REST, gRPC, GraphQL, WebSockets</span><span class="skill-item">	•	Cloud & DevOps: AWS, Docker, Firebase, CI/CD Pipelines</span><span class="skill-item">	•	Software Methodologies: Agile, Test-Driven Development (TDD), Microservices Architecture</span><span class="skill-item">	•	Version Control: Git, GitHub, GitLab</span></div>
+                </section>
+
+                <!-- Projects Section -->
+                <section class="section">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="projects-container">
+            <div class="project-item">
+                <h3><a href='	•	Team Leadership & Mentorship'>Soft Skills</a></h3>
+                <div class="project-description">
+                    <p>	•	Project Management & Deadline Handling<br>	•	Problem-Solving & Critical Thinking<br>	•	Effective Communication & Collaboration<br>	•	Time Management & Multitasking</p>
+                </div>
+                <div class="technologies">
+                    <span class='tech-tag'>n</span>
+                </div>
+            </div>
+            </div>
+                </section>
+
+                <!-- Two Column Section -->
+                <div class="two-column">
+                    <section class="section">
+                        <h2 class="section-title">Languages</h2>
+                        <div class="languages-container">
+                            
+            <div class="language-item">
+                <span class="language-name">English</span>
+                <span class="language-level">Fluent</span>
+            </div>
+            
+            <div class="language-item">
+                <span class="language-name">Hindi</span>
+                <span class="language-level">Native</span>
+            </div>
+            
+            <div class="language-item">
+                <span class="language-name">Telugu</span>
+                <span class="language-level">Intermediate</span>
+            </div>
+            
+                        </div>
+                    </section>
+
+                    <section class="section">
+                        <h2 class="section-title">Certifications</h2>
+                        <div class="certifications-container">
+                            
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Interests Section -->
+                <section class="section">
+                    <h2 class="section-title">Interests</h2>
+                    <div class="interests-container"><span class="interest-item">	App Development & Software Architecture – Passionate about building scalable and high-performance applications.</span><span class="interest-item">	•	Artificial Intelligence & Machine Learning – Interested in AI-driven solutions, LLMs, and automation.</span><span class="interest-item">	•	Open-Source Contribution – Engaged in contributing to and maintaining open-source projects.</span><span class="interest-item">	•	Competitive Coding & Problem Solving – Enthusiastic about coding challenges and algorithmic problem-solving.</span><span class="interest-item">	•	Tech Blogging & Knowledge Sharing – Enjoys writing about tech innovations and mentoring developers.</span><span class="interest-item">	•	Hackathons & Innovation Challenges – Actively participates in hackathons and tech competitions.</span><span class="interest-item">	•	Gaming & Game Development – Fascinated by game design, mechanics, and mobile gaming trends.</span><span class="interest-item">	•	Reading & Research – Keeps up with emerging tech trends and development methodologies.</span></div>
+                </section>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>
+                    © 2025 Mohammed Aymaan | Last Updated:
+                    2025
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>

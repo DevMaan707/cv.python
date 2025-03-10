@@ -1,0 +1,158 @@
+{
+  "personal": {
+    "name": "Mohammed Aymaan",
+    "title": "Software Development Engineer",
+    "email": "dev.maan707@gmail.com",
+    "phone": "+91 8008283186",
+    "location": "Hyderabad",
+    "website": "https://portfolio.devmaan.services",
+    "linkedin": "https://www.linkedin.com/in/mohammed-aymaan-2ba45524a/",
+    "github": "https://github.com/DevMaan707",
+    "twitter": "https://x.com/maan_dev82910",
+    "summary": "Results-driven App Developer at CoffeeCodes with a proven track record of delivering four real-time applications for real clients. Experienced in leading app development teams and managing interns while ensuring high-quality deliverables. Adept at balancing work and college commitments, demonstrating strong time management, leadership, and problem-solving skills. Passionate about building scalable, efficient, and user-centric applications in fast-paced environments."
+  },
+  "experience": [
+    {
+      "title": "Senior App Developer",
+      "company": "CoffeeCodes",
+      "location": "Gadwal,Hyderabad",
+      "start_date": "December, 2023",
+      "end_date": "Present",
+      "description": "Lead the app development team, ensuring timely project execution and delivery.\n\t•\tManage and mentor interns, providing guidance on best practices and technical skills.\n\t•\tDevelop and deploy real-time applications for clients, ensuring high performance and scalability.\n\t•\tBalance multiple responsibilities by effectively managing work and college commitments.\n\t•\tCollaborate with cross-functional teams to design, build, and optimize user-centric applications.\n\t•\tMaintain high coding standards, conduct code reviews, and implement industry best practices."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Btech",
+      "institution": "Anurag University",
+      "location": "Ghatkesar ,Hyderabad",
+      "start_date": "October 2022",
+      "end_date": "June 2026",
+      "description": ""
+    },
+    {
+      "degree": "Intermediate(XI and XII)",
+      "institution": "Narayana Junior College",
+      "location": "Tarnaka,Hyderabad",
+      "start_date": "June 2020",
+      "end_date": "April 2022",
+      "description": ""
+    },
+    {
+      "degree": "X",
+      "institution": "Johnson Grammar School",
+      "location": "Mallapur,Hyderabad",
+      "start_date": "June 2019",
+      "end_date": "April 2020",
+      "description": ""
+    }
+  ],
+  "skills": [
+    "Technical Skills",
+    "\t•\tProgramming Languages: Dart (Flutter), JavaScript, TypeScript, Go, Rust",
+    "\t•\tMobile App Development: Flutter, React Native",
+    "\t•\tBackend Development: Node.js, Express.js, Gin, Fiber",
+    "\t•\tDatabase Management: PostgreSQL, Firebase, Redis, SQLite",
+    "\t•\tAPI Development: REST, gRPC, GraphQL, WebSockets",
+    "\t•\tCloud & DevOps: AWS, Docker, Firebase, CI/CD Pipelines",
+    "\t•\tSoftware Methodologies: Agile, Test-Driven Development (TDD), Microservices Architecture",
+    "\t•\tVersion Control: Git, GitHub, GitLab",
+    "\nSoft Skills",
+    "\t•\tTeam Leadership & Mentorship",
+    "\t•\tProject Management & Deadline Handling\n\t•\tProblem-Solving & Critical Thinking\n\t•\tEffective Communication & Collaboration\n\t•\tTime Management & Multitasking"
+  ],
+
+  "projects": [
+    {
+      "name": "Aicraft - AI Integration SDK",
+      "url": "https://github.com/DevMaan707/aicraft",
+      "description": "Aicraft is a CrewAI-inspired framework for Golang, featuring an agent-manager system for building AI-driven workflows. It provides seamless integration with multiple generative AI models and optimizations for efficient API usage.",
+      "technologies": [
+        "Golang",
+        "REST APIs",
+        "OpenAI API",
+        "AWS Bedrock",
+        "Token Management",
+        "API Optimization"
+      ]
+    },
+    {
+      "name": "Food Transparency System",
+      "url": "https://github.com/DevMaan707/food-transparency",
+      "description": "A blockchain-based supply chain tracking system for food products. It leverages smart contracts to ensure data integrity and provides a user-friendly interface for stakeholders to verify product origins.",
+      "technologies": [
+        "JavaScript",
+        "Solidity",
+        "React.js",
+        "Ethereum",
+        "IPFS",
+        "Smart Contracts",
+        "Supply Chain"
+      ]
+    },
+    {
+      "name": "Facial Recognition Attendance System",
+      "url": "https://github.com/DevMaan707/facial-recognition",
+      "description": "A facial recognition-based attendance system using deep learning. It employs computer vision techniques for identity verification and includes anti-spoofing measures for security.",
+      "technologies": [
+        "Python",
+        "TensorFlow",
+        "Computer Vision",
+        "YOLO Object Detection",
+        "OpenCV",
+        "Flask"
+      ]
+    }
+  ],
+
+  "languages": [
+    {
+      "language": "English",
+      "proficiency": "Fluent"
+    },
+    {
+      "language": "Hindi",
+      "proficiency": "Native"
+    },
+    {
+      "language": "Telugu",
+      "proficiency": "Intermediate"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Problem Solving (Advanced)",
+      "issuer": "HackerRank",
+      "date": "15th September 2020",
+      "url": "https://www.hackerrank.com/certificates/c98ea6a713ad"
+    },
+    {
+      "name": "Problem Solving (Basic)",
+      "issuer": "HackerRank",
+      "date": "15th September 2020",
+      "url": "https://www.hackerrank.com/certificates/faf26759f211"
+    },
+    {
+      "name": "Machine Learning",
+      "issuer": "Udemy",
+      "date": "14th January 2023",
+      "url": "https://www.udemy.com/certificate/UC-07fd7f26-bd8e-4be3-9092-a0bcd11f1f2a/"
+    },
+    {
+      "name": "Python for Beginners",
+      "issuer": "Udemy",
+      "date": "4th August 2022",
+      "url": "https://www.udemy.com/certificate/UC-2ffb29fb-9113-4062-966c-19a0bb7e15fb/"
+    }
+  ],
+  "interests": [
+    "\tApp Development & Software Architecture – Passionate about building scalable and high-performance applications.",
+    "\t•\tArtificial Intelligence & Machine Learning – Interested in AI-driven solutions, LLMs, and automation.",
+    "\t•\tOpen-Source Contribution – Engaged in contributing to and maintaining open-source projects.",
+    "\t•\tCompetitive Coding & Problem Solving – Enthusiastic about coding challenges and algorithmic problem-solving.",
+    "\t•\tTech Blogging & Knowledge Sharing – Enjoys writing about tech innovations and mentoring developers.",
+    "\t•\tHackathons & Innovation Challenges – Actively participates in hackathons and tech competitions.",
+    "\t•\tGaming & Game Development – Fascinated by game design, mechanics, and mobile gaming trends.",
+    "\t•\tReading & Research – Keeps up with emerging tech trends and development methodologies."
+  ]
+}

@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{personal.name}} - Creative CV</title>
+        <style>
+            /* Import modern Google Fonts */
+            @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+            /* Reset and Base Styles */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            :root {
+                --primary-color: #4568dc;
+                --primary-gradient: linear-gradient(
+                    135deg,
+                    #4568dc 0%,
+                    #b06ab3 100%
+                );
+                --primary-light: rgba(69, 104, 220, 0.1);
+                --text-dark: #2c3e50;
+                --text-medium: #546e7a;
+                --text-light: #78909c;
+                --background-light: #f8fafc;
+                --card-shadow: 0 10px 20px rgba(69, 104, 220, 0.08);
+                --border-radius: 12px;
+                --transition: all 0.3s ease;
+            }
+
+            body {
+                color: var(--text-dark);
+                line-height: 1.7;
+                background: var(--background-light);
+                font-family: "Open Sans", sans-serif;
+                font-size: 15px;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: "Montserrat", sans-serif;
+                font-weight: 600;
+            }
+
+            .cv-container {
+                max-width: 850px;
+                margin: 40px auto;
+                background: white;
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+                border-radius: var(--border-radius);
+                overflow: hidden;
+                position: relative;
+            }
+
+            /* Header Section */
+            .cv-header {
+                padding: 60px 50px;
+                background: var(--primary-gradient);
+                color: white;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .cv-header::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 40px;
+                background: white;
+                border-radius: 100% 100% 0 0;
+                transform: translateY(50%);
+            }
+
+            .header-content {
+                margin: 0 auto;
+                max-width: 600px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .profile-name {
+                font-size: 2.8rem;
+                font-weight: 700;
+                margin-bottom: 8px;
+                letter-spacing: 0.5px;
+                text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .profile-title {
+                font-size: 1.4rem;
+                font-weight: 500;
+                margin-bottom: 25px;
+                opacity: 0.95;
+                letter-spacing: 0.5px;
+            }
+
+            .profile-summary {
+                font-size: 1.05rem;
+                line-height: 1.8;
+                margin-top: 30px;
+                opacity: 0.95;
+                max-width: 540px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .contact-row {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 25px;
+                margin-top: 35px;
+            }
+
+            .contact-item {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 1rem;
+                transition: var(--transition);
+            }
+
+            .contact-item:hover {
+                transform: translateY(-3px);
+            }
+
+            .contact-icon {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(255, 255, 255, 0.25);
+                border-radius: 50%;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                font-size: 1.2rem;
+            }
+
+            /* Main Content */
+            .main-content {
+                padding: 50px;
+            }
+
+            .sections-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px;
+            }
+
+            .section {
+                margin-bottom: 45px;
+            }
+
+            .section:empty {
+                display: none;
+            }
+
+            .full-width {
+                grid-column: 1 / -1;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+                font-weight: 600;
+                margin-bottom: 25px;
+                color: var(--primary-color);
+                position: relative;
+                display: inline-block;
+                letter-spacing: 0.5px;
+            }
+
+            .section-title::after {
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                width: 50px;
+                height: 4px;
+                background: var(--primary-color);
+                border-radius: 2px;
+            }
+
+            /* Experience & Education */
+            .timeline-items {
+                position: relative;
+                padding-left: 35px;
+            }
+
+            .timeline-items:empty {
+                display: none;
+            }
+
+            .timeline-items::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 8px;
+                bottom: 0;
+                width: 3px;
+                background: rgba(69, 104, 220, 0.15);
+                border-radius: 3px;
+            }
+
+            .timeline-item {
+                position: relative;
+                margin-bottom: 35px;
+                padding-bottom: 5px;
+            }
+
+            .timeline-item:last-child {
+                margin-bottom: 0;
+            }
+
+            .timeline-item::before {
+                content: "";
+                position: absolute;
+                left: -38px;
+                top: 8px;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: var(--primary-color);
+                border: 3px solid white;
+                box-shadow: 0 0 0 4px rgba(69, 104, 220, 0.2);
+                z-index: 1;
+            }
+
+            .timeline-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                margin-bottom: 12px;
+                gap: 10px;
+            }
+
+            .timeline-title {
+                font-size: 1.15rem;
+                font-weight: 600;
+                color: var(--text-dark);
+                letter-spacing: 0.3px;
+            }
+
+            .timeline-date {
+                font-size: 0.95rem;
+                padding: 5px 14px;
+                background: var(--primary-light);
+                color: var(--primary-color);
+                border-radius: 20px;
+                font-weight: 500;
+                letter-spacing: 0.3px;
+                box-shadow: 0 3px 8px rgba(69, 104, 220, 0.08);
+            }
+
+            .timeline-subtitle {
+                font-size: 1rem;
+                font-weight: 500;
+                color: var(--primary-color);
+                margin-bottom: 8px;
+                letter-spacing: 0.2px;
+            }
+
+            .timeline-location {
+                font-size: 0.9rem;
+                color: var(--text-light);
+                margin-bottom: 12px;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+
+            .timeline-content {
+                font-size: 0.95rem;
+                color: var(--text-medium);
+                line-height: 1.7;
+            }
+
+            /* Skills Section */
+            .skills-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .skills-container:empty {
+                display: none;
+            }
+
+            .skill-tag {
+                background: var(--primary-light);
+                color: var(--primary-color);
+                padding: 10px 18px;
+                border-radius: 50px;
+                font-size: 0.95rem;
+                font-weight: 500;
+                transition: var(--transition);
+                box-shadow: 0 3px 8px rgba(69, 104, 220, 0.05);
+                letter-spacing: 0.2px;
+            }
+
+            .skill-tag:hover {
+                box-shadow: 0 5px 12px rgba(69, 104, 220, 0.15);
+                transform: translateY(-4px);
+            }
+
+            /* Projects Section */
+            .projects-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 25px;
+            }
+
+            .projects-container:empty {
+                display: none;
+            }
+
+            .project-card {
+                background: #fff;
+                border-radius: var(--border-radius);
+                padding: 25px;
+                box-shadow: var(--card-shadow);
+                transition: var(--transition);
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid rgba(69, 104, 220, 0.05);
+            }
+
+            .project-card:hover {
+                box-shadow: 0 15px 30px rgba(69, 104, 220, 0.15);
+                transform: translateY(-5px);
+            }
+
+            .project-header {
+                margin-bottom: 18px;
+            }
+
+            .project-title {
+                font-size: 1.15rem;
+                font-weight: 600;
+                color: var(--text-dark);
+                margin-bottom: 8px;
+                letter-spacing: 0.3px;
+            }
+
+            .project-title a {
+                color: var(--text-dark);
+                text-decoration: none;
+                transition: var(--transition);
+            }
+
+            .project-title a:hover {
+                color: var(--primary-color);
+            }
+
+            .project-description {
+                font-size: 0.95rem;
+                color: var(--text-medium);
+                margin-bottom: 20px;
+                flex-grow: 1;
+                line-height: 1.6;
+            }
+
+            .project-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .project-tag {
+                background: #f5f7fa;
+                padding: 6px 12px;
+                border-radius: 6px;
+                font-size: 0.85rem;
+                color: var(--text-medium);
+                letter-spacing: 0.2px;
+            }
+
+            /* Languages Section */
+            .languages-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 18px;
+            }
+
+            .languages-container:empty {
+                display: none;
+            }
+
+            .language-card {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: #f5f7fa;
+                padding: 15px 20px;
+                border-radius: 10px;
+                transition: var(--transition);
+            }
+
+            .language-card:hover {
+                transform: translateY(-3px);
+                box-shadow: var(--card-shadow);
+            }
+
+            .language-info {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .language-name {
+                font-weight: 600;
+                color: var(--text-dark);
+            }
+
+            .language-level {
+                font-size: 0.85rem;
+                color: var(--text-light);
+            }
+
+            .language-badge {
+                font-size: 0.8rem;
+                padding: 5px 10px;
+                background: var(--primary-light);
+                color: var(--primary-color);
+                border-radius: 20px;
+                font-weight: 500;
+            }
+
+            /* Certifications Section */
+            .certifications-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .certifications-container:empty {
+                display: none;
+            }
+
+            .certification-card {
+                background: #f5f7fa;
+                padding: 18px 20px;
+                border-radius: 10px;
+                transition: var(--transition);
+                border: 1px solid rgba(69, 104, 220, 0.05);
+            }
+
+            .certification-card:hover {
+                transform: translateY(-3px);
+                box-shadow: var(--card-shadow);
+            }
+
+            .certification-name {
+                font-size: 1.05rem;
+                font-weight: 600;
+                color: var(--text-dark);
+                margin-bottom: 10px;
+                letter-spacing: 0.2px;
+            }
+
+            .certification-name a {
+                color: var(--text-dark);
+                text-decoration: none;
+                transition: var(--transition);
+            }
+
+            .certification-name a:hover {
+                color: var(--primary-color);
+            }
+
+            .certification-meta {
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.9rem;
+                color: var(--text-light);
+            }
+
+            /* Interests Section */
+            .interests-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .interests-container:empty {
+                display: none;
+            }
+
+            .interest-item {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 18px;
+                background: #f5f7fa;
+                border-radius: 50px;
+                font-size: 0.95rem;
+                color: var(--text-medium);
+                transition: var(--transition);
+            }
+
+            .interest-item:hover {
+                transform: translateY(-3px);
+                box-shadow: var(--card-shadow);
+                background: var(--primary-light);
+                color: var(--primary-color);
+            }
+
+            /* Footer */
+            .cv-footer {
+                text-align: center;
+                padding: 25px;
+                background: #f5f7fa;
+                color: var(--text-light);
+                font-size: 0.9rem;
+                border-top: 1px solid rgba(69, 104, 220, 0.05);
+            }
+
+            /* Media Queries */
+            @media (max-width: 768px) {
+                .cv-header {
+                    padding: 40px 30px;
+                }
+
+                .main-content {
+                    padding: 40px 30px;
+                }
+
+                .sections-grid {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                }
+
+                .profile-name {
+                    font-size: 2.3rem;
+                }
+
+                .profile-title {
+                    font-size: 1.2rem;
+                }
+
+                .timeline-header {
+                    flex-direction: column;
+                    gap: 8px;
+                }
+
+                .timeline-date {
+                    align-self: flex-start;
+                }
+
+                .projects-container,
+                .languages-container,
+                .certifications-container {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            @media print {
+                body {
+                    background-color: white;
+                }
+
+                .cv-container {
+                    margin: 0;
+                    box-shadow: none;
+                }
+
+                .cv-header {
+                    background: var(--primary-gradient) !important;
+                    -webkit-print-color-adjust: exact;
+                    print-color-adjust: exact;
+                }
+
+                .section-title::after {
+                    background: var(--primary-color) !important;
+                    -webkit-print-color-adjust: exact;
+                    print-color-adjust: exact;
+                }
+
+                .project-card:hover,
+                .skill-tag:hover,
+                .language-card:hover,
+                .certification-card:hover,
+                .interest-item:hover {
+                    transform: none;
+                    box-shadow: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cv-container">
+            <!-- Header -->
+            <header class="cv-header">
+                <div class="header-content">
+                    <h1 class="profile-name">{{personal.name}}</h1>
+                    <div class="profile-title">{{personal.title}}</div>
+
+                    <div class="contact-row">
+                        {{#if personal.email}}
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <span>{{personal.email}}</span>
+                        </div>
+                        {{/if}} {{#if personal.phone}}
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <span>{{personal.phone}}</span>
+                        </div>
+                        {{/if}} {{#if personal.location}}
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <span>{{personal.location}}</span>
+                        </div>
+                        {{/if}} {{#if personal.website}}
+                        <div class="contact-item">
+                            <div class="contact-icon">🌐</div>
+                            <span>{{personal.website}}</span>
+                        </div>
+                        {{/if}} {{#if personal.linkedin}}
+                        <div class="contact-item">
+                            <div class="contact-icon">💼</div>
+                            <span>{{personal.linkedin}}</span>
+                        </div>
+                        {{/if}}
+                    </div>
+
+                    {{#if personal.summary}}
+                    <p class="profile-summary">{{personal.summary}}</p>
+                    {{/if}}
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <div class="sections-grid">
+                    <!-- Experience Section -->
+                    {{#if experience_items}}
+                    <section class="section full-width">
+                        <h2 class="section-title">Professional Experience</h2>
+                        <div class="timeline-items">{{experience_items}}</div>
+                    </section>
+                    {{/if}}
+
+                    <!-- Left Column -->
+                    <div>
+                        <!-- Education Section -->
+                        {{#if education_items}}
+                        <section class="section">
+                            <h2 class="section-title">Education</h2>
+                            <div class="timeline-items">
+                                {{education_items}}
+                            </div>
+                        </section>
+                        {{/if}}
+
+                        <!-- Skills Section -->
+                        {{#if skill_items}}
+                        <section class="section">
+                            <h2 class="section-title">Skills</h2>
+                            <div class="skills-container">{{skill_items}}</div>
+                        </section>
+                        {{/if}}
+
+                        <!-- Languages Section -->
+                        {{#if language_items}}
+                        <section class="section">
+                            <h2 class="section-title">Languages</h2>
+                            <div class="languages-container">
+                                {{language_items}}
+                            </div>
+                        </section>
+                        {{/if}}
+                    </div>
+
+                    <!-- Right Column -->
+                    <div>
+                        <!-- Projects Section -->
+                        {{#if project_items}}
+                        <section class="section">
+                            <h2 class="section-title">Projects</h2>
+                            <div class="projects-container">
+                                {{project_items}}
+                            </div>
+                        </section>
+                        {{/if}}
+
+                        <!-- Certifications Section -->
+                        {{#if certification_items}}
+                        <section class="section">
+                            <h2 class="section-title">Certifications</h2>
+                            <div class="certifications-container">
+                                {{certification_items}}
+                            </div>
+                        </section>
+                        {{/if}}
+
+                        <!-- Interests Section -->
+                        {{#if interest_items}}
+                        <section class="section">
+                            <h2 class="section-title">Interests</h2>
+                            <div class="interests-container">
+                                {{interest_items}}
+                            </div>
+                        </section>
+                        {{/if}}
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="cv-footer">
+                <p>
+                    © {{current_year}} {{personal.name}} | Last Updated:
+                    {{current_month}} {{current_year}}
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
